@@ -1,10 +1,17 @@
 package com.turntabl.api.domain;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import java.math.BigDecimal;
 
+@ApiModel( description = "Position data Model description")
 public class Position {
+    @ApiModelProperty(value = "productDetail description")
     private ProductDetail productDetail;
+    @ApiModelProperty(value = "quantity description")
     private Integer quantity;
+    @ApiModelProperty(value = "averagePrice description")
     private BigDecimal averagePrice;
 
     public ProductDetail getProductDetail() {

@@ -2,6 +2,9 @@ package com.turntabl.api.controller;
 
 import com.turntabl.api.domain.Position;
 import com.turntabl.api.domain.ProductDetail;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Extension;
+import io.swagger.annotations.ExtensionProperty;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,6 +16,15 @@ import java.util.List;
 public class PositionsController {
 
     @GetMapping("/positions")
+    @ApiOperation(
+            value = "Returns all positions ",
+            notes = "Multiple positions object values, separated by comma",
+            extensions = {
+                    @Extension( name = "connectable", properties = {
+                            @ExtensionProperty(name = "connectable1", value = "productId")
+                    })
+            }
+    )
     public List<Position> getPositions() {
         List<Position> positions = new ArrayList<>();
         ProductDetail sge = new ProductDetail();
