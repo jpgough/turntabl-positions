@@ -29,7 +29,8 @@ public class PositionsApplication {
 				.apis(Predicates.not(RequestHandlerSelectors.basePackage("org.springframework.data.rest.webmvc")))
 				.paths(PathSelectors.any())
 				.build()
-				.apiInfo(metaInfo());
+				.apiInfo(metaInfo())
+				.host("localhost/positions");
 	}
 
 	private ApiInfo metaInfo() {
