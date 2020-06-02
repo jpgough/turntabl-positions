@@ -48,6 +48,7 @@ public class PositionsApplication {
 		);
 	}
 
+
 	@Bean
 	public CorsFilter corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -62,4 +63,5 @@ public class PositionsApplication {
 		source.registerCorsConfiguration("/v2/api-docs", config);
 		return new CorsFilter(source);
 	}
+
 }
