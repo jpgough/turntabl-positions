@@ -33,7 +33,7 @@ public class PositionsApplication {
 				.paths(PathSelectors.any())
 				.build()
 				.apiInfo(metaInfo())
-				.host("localhost/positions");
+				.host("http://localhost/positions");
 	}
 
 	private ApiInfo metaInfo() {
