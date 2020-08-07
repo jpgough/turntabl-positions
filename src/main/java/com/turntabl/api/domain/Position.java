@@ -7,11 +7,11 @@ import java.math.BigDecimal;
 
 @ApiModel( description = "Position data Model description")
 public class Position {
-    @ApiModelProperty(value = "productDetail description")
+    @ApiModelProperty(value = "details of the traded product")
     private ProductDetail productDetail;
-    @ApiModelProperty(value = "quantity description")
+    @ApiModelProperty(value = "quantity of the assets")
     private Integer quantity;
-    @ApiModelProperty(value = "averagePrice description")
+    @ApiModelProperty(value = "average price of the assets")
     private BigDecimal averagePrice;
 
     public ProductDetail getProductDetail() {
