@@ -5,11 +5,11 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel( description = "ProductDetail data Model description")
 public class ProductDetail {
-    @ApiModelProperty(value = "productId description")
+    @ApiModelProperty(value = "unique identifier for the product the trade was executed on")
     private String productId;
-    @ApiModelProperty(value = "exchange description")
+    @ApiModelProperty(value = "the exchange on which the stock is listed")
     private String exchange;
-    @ApiModelProperty(value = "ticker description")
+    @ApiModelProperty(value = "the executed product’s ticker symbol")
     private String ticker;
 
     public String getProductId() {

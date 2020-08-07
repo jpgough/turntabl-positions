@@ -39,7 +39,7 @@ public class PositionsApplication {
 	private ApiInfo metaInfo() {
 		return new ApiInfo(
 				"Positions API",
-				"positions api description",
+				"REST API which allows you to view current balances of recorded assets, liabilities, and equity",
 				"1.0",
 				"Terms of Service",
 				"positions Contact <positioncontact@email.io>",
